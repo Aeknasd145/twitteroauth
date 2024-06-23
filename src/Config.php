@@ -23,7 +23,7 @@ class Config
     /** @var int Delay in seconds before we retry the request */
     protected $retriesDelay = 1;
     /** @var string Version of the Twitter API requests should target */
-    protected $apiVersion = '2';
+    protected $apiVersion = '1.1';
 
     /**
      * Decode JSON Response as associative Array
@@ -42,7 +42,7 @@ class Config
     protected $gzipEncoding = true;
 
     /** @var integer Size for Chunked Uploads */
-    protected $chunkSize = 250000; // 0.25 MegaByte
+    protected $chunkSize = 1024 * 1024; // 0.25 MegaByte
 
     /**
      * Set the the Twitter API version.
